@@ -1,0 +1,225 @@
+/* Reset and global styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color:#c599ff;
+
+}
+
+/* Menu styles */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* Adjust padding for even spacing on the left and right */
+    background-color: transparent; /* Set menu bar background to transparent */
+    color: white;
+    z-index: 1000;
+}
+
+.menu-items {
+    margin-right: 6%;
+    display: flex;
+}
+
+.menu-items a {
+    position: relative;
+    margin-right: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.menu-items a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust the distance of the bar from the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(175, 175, 175);
+    transition: width 0.2s ease; /* Add transition for smooth effect */
+}
+
+.menu-items a:hover::after,
+.menu-items a.active::after {
+    width: 100%; /* Expand the width of the bar on hover and active */
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: rem;
+    height: 4rem;
+    margin-right: 10px;
+}
+
+/* Section styles */
+.section {
+    padding: 10vh 5%; /* Adjust padding for each section as needed */
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+/* Home section styles */
+.section[data-anchor="home"] {
+    background-color: #000000;
+}
+
+.section[data-anchor="home"] .content {
+    display: flex;
+    max-width: 90%; /* Adjust the max width as needed */
+    margin: 0 auto;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    max-height: 1080px; /* Set maximum height for smaller screens */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.section[data-anchor="home"] .text-content {
+    flex: 1;
+}
+
+.section[data-anchor="home"] .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+}
+
+.section[data-anchor="home"] img {
+    max-width: 80%; /* Ensure the image scales dynamically */
+    max-height: 80%; /* Ensure the image scales dynamically */
+    border-radius: 10px; /* Optional: Add a border radius for a rounded look */
+}
+
+.section[data-anchor="home"] h1 {
+    font-size: calc(16px + 6vw);
+    color: rgb(255, 255, 255);
+}
+
+.section[data-anchor="home"] .role {
+    font-size: calc(12px + 1.5vw);
+    background-clip: text;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    background-size: 200% 100%;
+}
+
+/* Media query for larger screens */
+@media (min-height: 1281px) {
+    .section[data-anchor="home"] .content {
+        max-height: 3200px; /* Set maximum height for larger screens */
+    }
+}
+
+
+/* Other section styles */
+#about {
+    background-color: #000;
+}
+
+/* Existing styles for other sections */
+
+/* About section styles */
+.section[data-anchor="about"] {
+    background-color: #000; /* Set the background color for the about section */
+}
+
+.section[data-anchor="about"] .content {
+    padding: 10vh 5%; /* Adjust padding for each section as needed */
+    color: rgb(255, 255, 255);
+}
+
+.section[data-anchor="about"] p {
+    font-size: 24px; /* Default font size for larger screens */
+    margin-bottom: 20px; /* Adjust spacing between paragraphs */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .section[data-anchor="about"] p {
+        font-size: 16px; /* Font size for smaller screens */
+    }
+}
+
+
+
+#portfolio {
+    background-color: #000;
+}
+
+    /* Portfolio section styles */
+.section[data-anchor="portfolio"] {
+    background-color: #000; /* Set the background color for the portfolio section */
+    padding: 10vh 5%; /* Adjust padding for each section as needed */
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width for different screen sizes */
+    margin: 10px;
+    overflow: hidden;
+}
+
+.portfolio-item a {
+            text-decoration: none; /* Remove underline */
+            color: #000; /* Change link color */
+        }
+.portfolio-item p {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio-item img {
+    width: 100%; /* Set the width to fill the container */
+    height: auto;
+    border-radius: 5px; /* Optional: Add border radius for a nicer look */
+    max-width: 100%; /* Ensure image doesn't exceed its container */
+    max-height: 100%; /* Ensure image doesn't exceed its container */
+}
+
+#resume {
+    background-color: #000;
+
+}
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+#contact {
+    background-color: #444;
+}
+
