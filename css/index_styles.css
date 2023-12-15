@@ -38,7 +38,7 @@ body {
 .menu-items a::after {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust the distance of the bar from the text */
+    bottom: 2px; /* Adjust the distance of the bar from the text */
     left: 0;
     width: 0;
     height: 2px;
@@ -69,12 +69,12 @@ body {
 .section {
     padding: 10vh 5%; /* Adjust padding for each section as needed */
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    background-color: none;
 }
 
 /* Home section styles */
 .section[data-anchor="home"] {
-    background-color: #000000;
+    background-color: none;
 }
 
 .section[data-anchor="home"] .content {

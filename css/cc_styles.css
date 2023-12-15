@@ -44,7 +44,7 @@ body {
 .menu-items a::after {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust the distance of the bar from the text */
+    bottom: 2px; /* Adjust the distance of the bar from the text */
     left: 0;
     width: 0;
     height: 2px;
