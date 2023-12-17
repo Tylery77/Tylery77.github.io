@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color:#c599ff;
+    background-color:#000;
 
 }
 
@@ -38,10 +38,10 @@ body {
 .menu-items a::after {
     content: '';
     position: absolute;
-    bottom: 2px; /* Adjust the distance of the bar from the text */
+    bottom: 20px; /* Adjust the distance of the bar from the text */
     left: 0;
     width: 0;
-    height: 2px;
+    height: 4px;
     background-color: rgb(175, 175, 175);
     transition: width 0.2s ease; /* Add transition for smooth effect */
 }
