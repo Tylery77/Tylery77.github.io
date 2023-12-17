@@ -78,7 +78,7 @@ body {
 
 /* Home section styles */
 .section[data-anchor="home"] {
-    background-color: none;
+    background-color: #000;
 }
 
 .section[data-anchor="home"] .content {
