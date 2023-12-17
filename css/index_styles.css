@@ -27,33 +27,34 @@ body {
 }
 
 .menu-items a {
-    text-decoration: none;
-    color: initial;
-    position: relative;
+    text-decoration: none; /* Remove default underline */
+    color: initial; /* Use default text color */
+    position: relative; /* Create a positioning context for pseudo-element */
+  
+    /* Transition for a smooth effect */
     transition: color 0.3s ease-in-out;
   }
   
   .menu-items a:hover {
-    text-decoration: underline;
-    color: #404040;
+    color: #404040; /* Change text color on hover */
   }
   
   .menu-items a::after {
-    content: '';
+    content: ''; /* Create the underline */
     position: absolute;
     left: 0;
     right: 0;
-    text-decoration: underline;
-    bottom: -20px; /* Position the underline 20px below the text */
-    height: 2px;
-    background-color: #404040;
-    transition: width 0.3s ease-in-out;
-    margin-top: 10px;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px; /* Set the height of the underline */
+    background-color: #404040; /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Transition effect for width */
   }
   
   .menu-items a:hover::after {
-    width: 100%;
+    width: 100%; /* Expand the underline on hover */
   }
+  
+  
   
   
 
