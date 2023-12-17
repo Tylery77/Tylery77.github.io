@@ -43,6 +43,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
+    text-decoration: underline;
     bottom: -20px; /* Position the underline 20px below the text */
     height: 2px;
     background-color: #404040;
