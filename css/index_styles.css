@@ -44,7 +44,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -20px; /* Position the underline below the text */
+    bottom: 20px; /* Position the underline below the text */
     height: 2px; /* Set the height of the underline */
     background-color: #404040; /* Color of the underline */
     transition: width 0.3s ease-in-out; /* Transition effect for width */
