@@ -46,6 +46,7 @@ body {
     height: 2px;
     background-color: #404040;
     transition: width 0.3s ease-in-out;
+    margin-top: 10px;
   }
   
   .menu-items a:hover::after {
