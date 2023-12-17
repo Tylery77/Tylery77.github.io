@@ -27,29 +27,33 @@ body {
 }
 
 .menu-items a {
-    position: relative;
-    margin-right: 25px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.menu-items a::after {
-    content: '';
+    text-decoration: none; /* Remove default underline */
+    color: initial; /* Use default text color */
+    position: relative; /* Create a positioning context for pseudo-element */
+  
+    /* Transition for a smooth effect */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .menu-items a:hover {
+    color: #404040; /* Change text color on hover */
+  }
+  
+  .menu-items a::after {
+    content: ''; /* Create the underline */
     position: absolute;
-    bottom: 20px; /* Adjust the distance of the bar from the text */
     left: 0;
-    width: 0;
-    height: 4px;
-    background-color: rgb(175, 175, 175);
-    transition: width 0.2s ease; /* Add transition for smooth effect */
-}
-
-.menu-items a:hover::after,
-.menu-items a.active::after {
-    width: 100%; /* Expand the width of the bar on hover and active */
-}
+    right: 0;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px; /* Set the height of the underline */
+    background-color: #404040; /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Transition effect for width */
+  }
+  
+  .menu-items a:hover::after {
+    width: 100%; /* Expand the underline on hover */
+  }
+  
 
 /* Logo styles */
 .logo {
