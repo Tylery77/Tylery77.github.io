@@ -244,6 +244,7 @@ a:hover {
 .text-overlay {
     /* ... other existing styles */
     padding-left: 20px; /* To move the text 20px to the right */
+    padding-right: 20px;
 }
 
 .text-overlay p {
