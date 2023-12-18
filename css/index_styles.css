@@ -2,8 +2,22 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color:#000;
+    background-color: #000;
 
+}
+
+/* Resetting the default link styles */
+a {
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Use the default text color */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: none;
+    /* Change to your preferred color */
 }
 
 /* Menu styles */
@@ -15,8 +29,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjust padding for even spacing on the left and right */
-    background-color: transparent; /* Set menu bar background to transparent */
+    padding: 20px 5%;
+    /* Adjust padding for even spacing on the left and right */
+    background-color: transparent;
+    /* Set menu bar background to transparent */
     color: white;
     z-index: 1000;
 }
@@ -33,28 +49,33 @@ body {
     color: white;
     font-size: 24px;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .menu-items a::after {
     content: '';
     position: absolute;
-    bottom: -10px; /* Adjust the distance of the bar from the text */
+    bottom: -10px;
+    /* Adjust the distance of the bar from the text */
     left: 0;
     width: 0;
     height: 4px;
     background-color: rgb(175, 175, 175);
-    transition: width 0.2s ease; /* Add transition for smooth effect */
+    transition: width 0.2s ease;
+    /* Add transition for smooth effect */
 }
 
 .menu-items a:hover::after,
 .menu-items a.active::after {
-    width: 100%; /* Expand the width of the bar on hover and active */
+    width: 100%;
+    /* Expand the width of the bar on hover and active */
 }
 
-  
-  
-  
-  
+.menu-items a:hover {
+    color: #404040;
+    /* Change text color on hover */
+}
+
 
 /* Logo styles */
 .logo {
@@ -72,7 +93,8 @@ body {
 
 /* Section styles */
 .section {
-    padding: 10vh 5%; /* Adjust padding for each section as needed */
+    padding: 10vh 5%;
+    /* Adjust padding for each section as needed */
     color: rgb(255, 255, 255);
     background-color: none;
 }
@@ -84,14 +106,17 @@ body {
 
 .section[data-anchor="home"] .content {
     display: flex;
-    max-width: 90%; /* Adjust the max width as needed */
+    max-width: 90%;
+    /* Adjust the max width as needed */
     margin: 0 auto;
     text-align: left;
     color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
-    max-height: 1080px; /* Set maximum height for smaller screens */
-    overflow: hidden; /* Hide overflow content */
+    max-height: 1080px;
+    /* Set maximum height for smaller screens */
+    overflow: hidden;
+    /* Hide overflow content */
 }
 
 .section[data-anchor="home"] .text-content {
@@ -101,13 +126,17 @@ body {
 .section[data-anchor="home"] .image-content {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Align the image to the right */
+    justify-content: flex-end;
+    /* Align the image to the right */
 }
 
 .section[data-anchor="home"] img {
-    max-width: 80%; /* Ensure the image scales dynamically */
-    max-height: 80%; /* Ensure the image scales dynamically */
-    border-radius: 10px; /* Optional: Add a border radius for a rounded look */
+    max-width: 80%;
+    /* Ensure the image scales dynamically */
+    max-height: 80%;
+    /* Ensure the image scales dynamically */
+    border-radius: 10px;
+    /* Optional: Add a border radius for a rounded look */
 }
 
 .section[data-anchor="home"] h1 {
@@ -126,7 +155,8 @@ body {
 /* Media query for larger screens */
 @media (min-height: 1281px) {
     .section[data-anchor="home"] .content {
-        max-height: 3200px; /* Set maximum height for larger screens */
+        max-height: 3200px;
+        /* Set maximum height for larger screens */
     }
 }
 
@@ -140,73 +170,117 @@ body {
 
 /* About section styles */
 .section[data-anchor="about"] {
-    background-color: #000; /* Set the background color for the about section */
+    background-color: #000;
+    /* Set the background color for the about section */
 }
 
 .section[data-anchor="about"] .content {
-    padding: 10vh 5%; /* Adjust padding for each section as needed */
+    padding: 10vh 5%;
+    /* Adjust padding for each section as needed */
     color: rgb(255, 255, 255);
 }
 
 .section[data-anchor="about"] p {
-    font-size: 24px; /* Default font size for larger screens */
-    margin-bottom: 20px; /* Adjust spacing between paragraphs */
+    font-size: 24px;
+    /* Default font size for larger screens */
+    margin-bottom: 20px;
+    /* Adjust spacing between paragraphs */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .section[data-anchor="about"] p {
-        font-size: 16px; /* Font size for smaller screens */
-    }
-}
+/* General styles */
 
-
-
-#portfolio {
-    background-color: #000;
-}
-
-    /* Portfolio section styles */
-.section[data-anchor="portfolio"] {
-    background-color: #000; /* Set the background color for the portfolio section */
-    padding: 10vh 5%; /* Adjust padding for each section as needed */
-}
 
 .portfolio-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* 20px padding on both sides */
+}
+
+.portfolio-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
 }
 
 .portfolio-item {
     position: relative;
-    flex: 0 0 calc(33.33% - 20px); /* Adjust the width for different screen sizes */
-    margin: 10px;
     overflow: hidden;
-}
-
-.portfolio-item a {
-            text-decoration: none; /* Remove underline */
-            color: #000; /* Change link color */
-        }
-.portfolio-item p {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .portfolio-item img {
-    width: 100%; /* Set the width to fill the container */
+    display: block;
+    width: 100%;
     height: auto;
-    border-radius: 5px; /* Optional: Add border radius for a nicer look */
-    max-width: 100%; /* Ensure image doesn't exceed its container */
-    max-height: 100%; /* Ensure image doesn't exceed its container */
 }
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.text-overlay h3 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.text-overlay {
+    /* ... other existing styles */
+    padding-left: 20px; /* To move the text 20px to the right */
+}
+
+.text-overlay p {
+    font-size: 24px;
+    color: #fff;
+}
+
+.text-overlay h3,
+.text-overlay p {
+    padding-left: 20px; /* Aligning text with the moved overlay */
+}
+
+.portfolio-item:hover .text-overlay {
+    opacity: 0.8;
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .portfolio-item {
+        margin-left: 0;
+        /* Reset left margin for smaller screens */
+    }
+
+    .portfolio-item p {
+        bottom: 20px;
+        /* Adjust the distance from the bottom for smaller screens */
+    }
+}
+
 
 #resume {
     background-color: #000;
 
 }
+
 .resume-button {
     display: inline-block;
     padding: 10px 20px;
@@ -227,4 +301,3 @@ body {
 #contact {
     background-color: #444;
 }
-
