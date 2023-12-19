@@ -21,8 +21,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjust padding for even spacing on the left and right */
-    background-color: transparent; /* Set menu bar background to transparent */
+    padding: 20px 5%;
+    /* Adjust padding for even spacing on the left and right */
+    background-color: transparent;
+    /* Set menu bar background to transparent */
     color: white;
     z-index: 1000;
 }
@@ -37,24 +39,33 @@ body {
     margin-right: 25px;
     text-decoration: none;
     color: white;
-    font-size: 1.25rem;
+    font-size: 24px;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .menu-items a::after {
     content: '';
     position: absolute;
-    bottom: 2px; /* Adjust the distance of the bar from the text */
+    bottom: -10px;
+    /* Adjust the distance of the bar from the text */
     left: 0;
     width: 0;
-    height: 2px;
+    height: 4px;
     background-color: rgb(175, 175, 175);
-    transition: width 0.2s ease; /* Add transition for smooth effect */
+    transition: width 0.2s ease;
+    /* Add transition for smooth effect */
 }
 
 .menu-items a:hover::after,
 .menu-items a.active::after {
-    width: 100%; /* Expand the width of the bar on hover and active */
+    width: 100%;
+    /* Expand the width of the bar on hover and active */
+}
+
+.menu-items a:hover {
+    color: #404040;
+    /* Change text color on hover */
 }
 
 /* Logo styles */
@@ -168,10 +179,17 @@ body {
     line-height: 1.5;
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
+    transition: color 0.3s, font-weight 0.3s; /* Adding transition for a smooth effect */
 }
 
 .section[data-anchor="two"] ul li strong {
     font-size: 36px;
+}
+
+.section[data-anchor="two"] ul li:hover,
+.section[data-anchor="two"] ul li:active {
+    font-weight: bold;
+    color: #404040;
 }
 
 
