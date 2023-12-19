@@ -893,6 +893,7 @@ a {
 /* Style the video container */
 .section[data-anchor="twelve"] .right-half {
     position: relative;
+    margin-bottom: 50px;
 }
 
 .section[data-anchor="twelve"] .right-half video {
