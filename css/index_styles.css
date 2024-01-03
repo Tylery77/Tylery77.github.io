@@ -328,3 +328,25 @@ h1 {
     width: 640px; /* You can adjust the width */
     height: 1012px; /* You can adjust the height */
 }
+
+div[data-anchor="contact"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  div[data-anchor="contact"] h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+ 
+  
+  div[data-anchor="contact"] iframe {
+    max-width: 100%;
+    width: 640px; /* You can adjust the width */
+    height: 1012px; /* You can adjust the height */
+  }
+  
