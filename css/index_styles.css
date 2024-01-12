@@ -244,19 +244,23 @@ a:hover {
 
 .text-overlay {
     /* ... other existing styles */
-    padding-left: 20px; /* To move the text 20px to the right */
+    padding-left: 20px;
+    /* To move the text 20px to the right */
 }
 
 .text-overlay p {
     font-size: 24px;
     color: #fff;
-    padding-left: 20px; /* Aligning text with the moved overlay */
-    padding-right: 40px; /* Adding 20px padding to the right */
+    padding-left: 20px;
+    /* Aligning text with the moved overlay */
+    padding-right: 40px;
+    /* Adding 20px padding to the right */
 }
 
 .text-overlay h3,
 .text-overlay p {
-    padding-left: 20px; /* Aligning text with the moved overlay */
+    padding-left: 20px;
+    /* Aligning text with the moved overlay */
     padding-right: 20px;
 }
 
@@ -300,8 +304,3 @@ a:hover {
     background-color: black;
     color: white;
 }
-
-
-
-
-  
