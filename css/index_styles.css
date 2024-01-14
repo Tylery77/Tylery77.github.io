@@ -103,6 +103,7 @@ a:hover {
 /* Home section styles */
 .section[data-anchor="home"] {
     background-color: #000;
+    overflow: hidden;
 }
 
 .section[data-anchor="home"] .content {
@@ -141,7 +142,12 @@ a:hover {
 }
 
 .section[data-anchor="home"] h1 {
-    font-size: calc(16px + 6vw);
+    font-size: calc(24px + 6vw);
+    color: rgb(255, 255, 255);
+}
+
+.section[data-anchor="home"] li {
+    font-size: 24px;
     color: rgb(255, 255, 255);
 }
 

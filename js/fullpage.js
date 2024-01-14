@@ -2706,6 +2706,7 @@
     */
 
     function responsive() {
+      setAutoScrolling(false, 'internal') 
       var widthLimit = getOptions().responsive || getOptions().responsiveWidth; //backwards compatiblity
 
       var heightLimit = getOptions().responsiveHeight; //only calculating what we need. Remember its called on the resize event.
