@@ -318,7 +318,7 @@ a:hover {
 }
 
 .section[data-anchor="contact"] .body {
-    font-family: 'montserrat';
+    font-family: 'Montserrat';
     background: red;
 }
 
@@ -373,7 +373,7 @@ a:hover {
     border: 2px solid #404040;
 }
 
-.section[data-anchor="contact"] .contact-inputs:placeholder {
+.section[data-anchor="contact"] .contact-inputs::placeholder {
     color: #404040;
 }
 
