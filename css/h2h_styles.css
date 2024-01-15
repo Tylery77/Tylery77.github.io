@@ -1,10 +1,9 @@
-/* Reset and global styles */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     /* Set the background color */
     background-color: black;
-
+    
     /* Set background size and other properties */
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -39,18 +38,19 @@ body {
     margin-right: 25px;
     text-decoration: none;
     color: white;
-    font-size: 1.25rem;
+    font-size: 24px;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .menu-items a::after {
     content: '';
     position: absolute;
-    bottom: 2px;
+    bottom: -10px;
     /* Adjust the distance of the bar from the text */
     left: 0;
     width: 0;
-    height: 2px;
+    height: 4px;
     background-color: rgb(175, 175, 175);
     transition: width 0.2s ease;
     /* Add transition for smooth effect */
@@ -60,6 +60,11 @@ body {
 .menu-items a.active::after {
     width: 100%;
     /* Expand the width of the bar on hover and active */
+}
+
+.menu-items a:hover {
+    color: #404040;
+    /* Change text color on hover */
 }
 
 /* Logo styles */
@@ -84,43 +89,32 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+}
+
 /* Button */
-.sticky-button {
+#sticky-button-container {
     position: fixed;
     bottom: 100px;
     right: 100px;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid #404040;
-    border-radius: 20px;
-    cursor: pointer;
     z-index: 9999;
-    font-size: 24px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+}
+
+.sticky-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/btt.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
 }
 
 .sticky-button:hover {
-    padding: 10px 20px;
-    background-color: #404040;
-    color: white;
-    border: 2px solid white;
-    border-radius: 20px;
-    cursor: pointer;
-    z-index: 9999;
-    font-size: 24px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-.section {
-    padding: 10vh 5%;
-    /* Adjust padding for each section as needed */
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    background-image: url('../images/btthover.png');
+    transform: scale(1.5);
+    /* Add any additional hover styles */
 }
 
 /*CSS Style for Section One*/
