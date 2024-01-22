@@ -169,29 +169,20 @@ a:hover {
 
 
 /* Other section styles */
-#about {
-    background-color: #000;
-}
-
-/* Existing styles for other sections */
-
-/* About section styles */
 .section[data-anchor="about"] {
-    background-color: #000;
-    /* Set the background color for the about section */
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto; /* Center the container */
 }
 
-.section[data-anchor="about"] .content {
-    padding: 10vh 5%;
-    /* Adjust padding for each section as needed */
-    color: rgb(255, 255, 255);
+.section[data-anchor="about"] h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px; /* Optional: Adjust spacing between h1 and p */
 }
 
 .section[data-anchor="about"] p {
     font-size: 24px;
-    /* Default font size for larger screens */
-    margin-bottom: 20px;
-    /* Adjust spacing between paragraphs */
 }
 
 /* General styles */
@@ -200,8 +191,7 @@ a:hover {
 .portfolio-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    /* 20px padding on both sides */
+    padding: 0 20px; /* 20px padding on both sides */
 }
 
 .portfolio-column {
@@ -238,6 +228,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    padding-left: 20px; /* To move the text 20px to the right */
 }
 
 .text-overlay h3 {
@@ -248,30 +239,28 @@ a:hover {
     color: #fff;
 }
 
-.text-overlay {
-    /* ... other existing styles */
-    padding-left: 20px;
-    /* To move the text 20px to the right */
-}
-
 .text-overlay p {
     font-size: 24px;
     color: #fff;
-    padding-left: 20px;
-    /* Aligning text with the moved overlay */
-    padding-right: 40px;
-    /* Adding 20px padding to the right */
+    padding-left: 20px; /* Aligning text with the moved overlay */
+    padding-right: 40px; /* Adding 20px padding to the right */
 }
 
 .text-overlay h3,
 .text-overlay p {
-    padding-left: 20px;
-    /* Aligning text with the moved overlay */
+    padding-left: 20px; /* Aligning text with the moved overlay */
     padding-right: 20px;
 }
 
 .portfolio-item:hover .text-overlay {
     opacity: 0.8;
+}
+
+.section[data-anchor="portfolio"] h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; /* Optional: Adjust spacing between h1 and portfolio items */
 }
 
 
